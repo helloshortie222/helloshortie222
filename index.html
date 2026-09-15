@@ -126,19 +126,33 @@
     animation: rise 0.8s ease-out forwards;
   }
 
-  .verse-footer {
+  .page-footer {
     position: absolute;
     bottom: 28px;
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     text-align: center;
     padding: 0 24px;
+  }
+
+  .secret-note {
+    font-size: clamp(0.95rem, 2.4vw, 1.2rem);
+    color: rgba(255,209,102,0.75);
+    letter-spacing: 0.01em;
+    opacity: 0;
+    animation: rise 0.8s ease-out 1.4s forwards;
+  }
+
+  .verse-footer {
     font-family: 'Fraunces', serif;
     font-style: italic;
-    font-size: clamp(0.75rem, 1.8vw, 0.95rem);
+    font-size: clamp(1.05rem, 2.8vw, 1.4rem);
     color: rgba(255,255,255,0.6);
     opacity: 0;
-    animation: rise 0.8s ease-out 1.6s forwards;
+    animation: rise 0.8s ease-out 1.7s forwards;
   }
 
   .next-btn:hover {
@@ -343,7 +357,10 @@
 
     <button class="next-btn" id="nextBtn" type="button">Next</button>
 
-    <div class="verse-footer">&ldquo;This is the day the Lord has made; we will rejoice and be glad in it.&rdquo; &mdash; Psalm 118:24</div>
+    <div class="page-footer">
+      <div class="secret-note">Don't ruin the surprise &mdash; don't text anyone, just play along until the challenge is over.</div>
+      <div class="verse-footer">&ldquo;This is the day the Lord has made; we will rejoice and be glad in it.&rdquo; &mdash; Psalm 118:24</div>
+    </div>
   </div>
 
   <div class="stage reveal challenge-screen" id="challengeStage">
